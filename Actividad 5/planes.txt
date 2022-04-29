@@ -1,0 +1,6 @@
+1111;Mercedes A-Class A220;AMG Line;200000
+3212;Ford Fiesta 1.0 Ecoboost;140 ST-Line X;100000
+7583;Land Rover Discovery;SD6 306 HSE;500000
+7954;BMW X3 xDriv;20i M Sport (2018);1500000
+5401;Audi TT RS;Roadster;300000
+9121;DS 3 Crossbak Puretech;155 Utra Prestige;20005000
