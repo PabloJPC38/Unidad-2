@@ -1,26 +1,31 @@
-from csv import reader
-from os import path
-import numpy as np
-
-
-
 class Cama:
 
-    def __init__(self,id:int,hab,estado:bool,diag,f_intern,f_alta=None,NyA=None,):
+    def __init__(self,id:int,hab:int,est:bool,NyA:str|None,diag:str|None,f_intern:str|None,f_alta:str|None):
 
         self.__id=id
         self.__hab=hab
-        self.__estado=estado
+        self.__est=est
         self.__NyA=NyA
         self.__diag=diag
         self.__f_intern=f_intern
         self.__f_alta=f_alta
 
-class Ctrl_Cama(Cama):
-
-    def Leer_Archivo(self):
-
-        with open(path.dirname(__file__)+ "/camas.csv","r") as f:
-            next(f)
-            return list(map(lambda lista: (lista[0],lista[1],lista[2],lista[3],lista[4],lista[5],lista[6]),reader(f,delimiter=";")))
-
+    def Get_Id(self)->int:
+        return self.__id
+    def Get_Hab(self):
+        return self.__hab
+    def Get_Est(self):
+        return self.__est
+    def Get_NyA(self):
+        if self.__NyA==None:
+            return "No existe paciente"
+        else:
+            return self.__NyA
+    def Get_Diag(self)->str:
+        return self.__diag or "No existe paciente"
+    def Get_F_Intern(self):
+        return self.__f_intern or "No existe paciente"
+    def Get_F_Alta(self):
+        return self.__f_alta
+    def Set_F_Alta(self,fecha):
+        self.__f_alta=fecha
