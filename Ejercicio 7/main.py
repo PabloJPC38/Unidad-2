@@ -51,7 +51,7 @@ if __name__=="__main__":
                 else:
                     print("Error en la operación")
 
-    Lista=Leer_Archivo(path.dirname(__file__)+ "/viajero.txt")
+    Lista=Leer_Archivo(path.dirname(__file__)+ "/viajero.csv")
     Comparar(Lista)
     Acumular_Millas(Lista)
     Canjear_Millas(Lista)
